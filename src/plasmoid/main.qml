@@ -23,7 +23,7 @@ PlasmoidItem {
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
-    property alias serverUnavailable: printersModel.serverUnavailable
+    readonly property bool serverUnavailable: printersModel.serverState === PrintManager.ServerState.Unavailable
     property string printersModelError: ""
     property int printerCount
 
